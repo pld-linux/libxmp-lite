@@ -5,14 +5,12 @@
 Summary:	XMP Lite module player library
 Summary(pl.UTF-8):	Biblioteka odtwarzacza modułów XMP Lite
 Name:		libxmp-lite
-Version:	4.4.1
+Version:	4.5.0
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/xmp/%{name}-%{version}.tar.gz
-# Source0-md5:	d37f69e8a2e6f7b5718b7997cafbb033
-# http://downloads.sourceforge.net/xmp/fix-libxmp-lite-mod-loader.patch
-Patch0:		fix-libxmp-lite-mod-loader.patch
+Source0:	https://downloads.sourceforge.net/xmp/%{name}-%{version}.tar.gz
+# Source0-md5:	18e8e2e37444b0acfa6ec28fab96cb48
 URL:		http://xmp.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,7 +53,6 @@ Statyczna biblioteka XMP.
 
 %prep
 %setup -q
-%patch0 -p2
 
 %build
 %configure \
