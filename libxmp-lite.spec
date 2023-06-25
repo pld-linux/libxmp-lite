@@ -1,17 +1,17 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static libraries
+%bcond_without	static_libs	# static library
 #
 Summary:	XMP Lite module player library
 Summary(pl.UTF-8):	Biblioteka odtwarzacza modułów XMP Lite
 Name:		libxmp-lite
-Version:	4.5.0
+Version:	4.6.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	https://downloads.sourceforge.net/xmp/%{name}-%{version}.tar.gz
-# Source0-md5:	18e8e2e37444b0acfa6ec28fab96cb48
-URL:		http://xmp.sourceforge.net/
+# Source0-md5:	cb0ad6481e02a18bddaeb3ecb9e07595
+URL:		https://xmp.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -83,6 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libxmp-lite.so
 %{_includedir}/libxmp-lite
 %{_pkgconfigdir}/libxmp-lite.pc
+%{_libdir}/cmake/libxmp-lite
 
 %if %{with static_libs}
 %files static
